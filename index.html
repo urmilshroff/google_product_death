@@ -12,9 +12,6 @@
                 font-family: "product sans";
                 text-align: center;
                 font-size: 30px;
-                left: 0;
-                line-height: 200px;
-                margin: auto;
                 position: absolute;
                 top: 50%;
                 width: 100%;
@@ -60,7 +57,7 @@
 
             if(distance<0) //once timer ends
             {
-                clearInterval(x);
+                clearInterval(googlePlus);
                 document.getElementById("google-plus").innerHTML="R.I.P. Google+, 2011-2019";
             }
 
@@ -79,7 +76,7 @@
 
             if(distance<0) //once timer ends
             {
-                clearInterval(x);
+                clearInterval(inbox);
                 document.getElementById("inbox").innerHTML="R.I.P. Inbox by Gmail, 2014-2019";
             }
 
