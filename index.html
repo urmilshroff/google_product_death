@@ -11,17 +11,30 @@
             {
                 font-family: "product sans";
                 text-align: center;
-                font-size-adjust: 0.58;
+                font-size: 30px;
+                left: 0;
+                line-height: 200px;
+                margin: auto;
+                position: absolute;
+                top: 50%;
+                width: 100%;
             }
 
             #google-plus
             {
                 color: #dd4e41;
+                margin-top: -150px;
             }
 
             #inbox
             {
                 color: #4379e3;
+                margin-top: -100px;
+            }
+
+            @media (max-width: 400px) /* to optimize the page for mobile */
+            {
+
             }
         </style>
     </head>
@@ -31,13 +44,13 @@
         <p id="inbox"> </p>
 
         <script>
-        var countdownGooglePlus=new Date("Aug 31, 2019 00:00:00").getTime(); //when G+ dies
-        var countdownInbox=new Date("Mar 31, 2019 00:00:00").getTime(); //when Inbox dies
+        var deathTimeGooglePlus=new Date("Aug 31, 2019 00:00:00").getTime(); //when G+ dies
+        var deathTimeInbox=new Date("Mar 31, 2019 00:00:00").getTime(); //when Inbox dies
 
         var googlePlus=setInterval(function()
         {
             var now=new Date().getTime();
-            var distance=countdownGooglePlus-now;
+            var distance=deathTimeGooglePlus-now;
             var days=Math.floor(distance/(1000*60*60*24));
             var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
             var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
@@ -56,7 +69,7 @@
         var inbox=setInterval(function()
         {
             var now=new Date().getTime();
-            var distance=countdownInbox-now;
+            var distance=deathTimeInbox-now;
             var days=Math.floor(distance/(1000*60*60*24));
             var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
             var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
