@@ -9,37 +9,69 @@
         <style media="screen">
             p
             {
-                color: #333333;
                 font-family: "product sans";
                 text-align: center;
                 font-size-adjust: 0.58;
+            }
+
+            #google-plus
+            {
+                color: #dd4e41;
+            }
+
+            #inbox
+            {
+                color: #4379e3;
             }
         </style>
     </head>
 
     <body>
-        <p id="countdown"> </p>
+        <p id="google-plus"> </p>
+        <p id="inbox"> </p>
 
         <script>
-        var countDownDate=new Date("Aug 31, 2019 00:00:00").getTime();
-        var x=setInterval(function()
+        var countdownGooglePlus=new Date("Aug 31, 2019 00:00:00").getTime(); //when G+ dies
+        var countdownInbox=new Date("Mar 31, 2019 00:00:00").getTime(); //when Inbox dies
+
+        var googlePlus=setInterval(function()
         {
             var now=new Date().getTime();
-            var distance=countDownDate-now;
+            var distance=countdownGooglePlus-now;
             var days=Math.floor(distance/(1000*60*60*24));
             var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
             var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
             var seconds=Math.floor((distance%(1000*60))/1000);
 
-            document.getElementById("countdown").innerHTML=days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
+            document.getElementById("google-plus").innerHTML="Google+ dead in: "+days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
 
             if(distance<0) //once timer ends
             {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML="R.I.P.";
+                document.getElementById("google-plus").innerHTML="R.I.P. Google+, 2011-2019";
             }
 
         }, 1000);
+
+        var inbox=setInterval(function()
+        {
+            var now=new Date().getTime();
+            var distance=countdownInbox-now;
+            var days=Math.floor(distance/(1000*60*60*24));
+            var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+            var seconds=Math.floor((distance%(1000*60))/1000);
+
+            document.getElementById("inbox").innerHTML="Inbox by Gmail dead in: "+days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
+
+            if(distance<0) //once timer ends
+            {
+                clearInterval(x);
+                document.getElementById("inbox").innerHTML="R.I.P. Inbox by Gmail, 2014-2019";
+            }
+
+        }, 1000);
+
         </script>
     </body>
 </html>
