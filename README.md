@@ -1,2 +1,3 @@
-# google_product_death
-A website which shows the time remaining for the official death of various Google products
+# Google Product Death
+
+If you hate the fact that Google is killing half of the products you use and love because apparently not many people use them, you've come to the right place.
