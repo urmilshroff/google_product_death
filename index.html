@@ -6,6 +6,16 @@
 
         <title> Google Product Death Countdown </title>
 
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style media="screen">
+            p <!-- not working -->
+            {
+                color: #333333;
+                font-family: &quot;product sans&quot;;
+                line-height: 24px
+            }
+        </style>
+
     </head>
     <body>
         <p id="countdown"> </p>
@@ -14,6 +24,14 @@
         var countDownDate=new Date("Aug 31, 2019 15:37:25").getTime();
         var x=setInterval(function()
         {
+            <!-- var style=document.createElement('style');
+            style.innerHTML =
+            	'.countdown {' +
+            		'color: purple;' +
+            		'background-color: #e5e5e5;' +
+            		'height: 150px;' +
+            	'}'; -->
+
             var now=new Date().getTime();
             var distance=countDownDate-now;
             var days=Math.floor(distance/(1000*60*60*24));
