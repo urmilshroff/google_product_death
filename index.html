@@ -2,9 +2,12 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-blue.min.css" />
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
         <title> Google Product Death Countdown </title>
 
@@ -35,12 +38,53 @@
             {
 
             }
+
+            .demo-card-wide.mdl-cards
+            {
+              width: 512px;
+              float: right;
+            }
+            .demo-card-wide > .mdl-card__title
+            {
+              color: #fff;
+              height: 176px;
+              float: right;
+              background: url('../assets/demos/welcome_card.jpg') center / cover;
+            }
+            .demo-card-wide > .mdl-card__menu
+            {
+              color: #fff;
+              float: right;
+            }
         </style>
     </head>
 
     <body>
         <p id="google-plus"> </p>
         <p id="inbox"> </p>
+
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Welcome</h2>
+            </div>
+
+            <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Get Started
+                </a>
+            </div>
+
+            <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                </button>
+            </div>
+        </div>
 
         <script>
         var deathTimeGooglePlus=new Date("Aug 31, 2019 00:00:00").getTime(); //when G+ dies
@@ -83,7 +127,6 @@
             }
 
         }, 1000);
-
         </script>
     </body>
 </html>
