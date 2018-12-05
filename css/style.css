@@ -9,3 +9,22 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}
+    
+p {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+#google-plus {
+    color: #dd4e41;
+    margin-top: -150px;
+}
+
+#inbox {
+    color: #4379e3;
+    margin-top: -100px;
+}

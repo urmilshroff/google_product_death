@@ -11,35 +11,36 @@
 
     <title> Google Product Death Countdown </title>
 
-    <style media="screen">
-        p {
-            font-family: 'Roboto', sans-serif;
-            text-align: center;
-            font-size: 30px;
-            position: absolute;
-            top: 50%;
-            width: 100%;
-        }
-
-        #google-plus {
-            color: #dd4e41;
-            margin-top: -150px;
-        }
-
-        #inbox {
-            color: #4379e3;
-            margin-top: -100px;
-        }
-    </style>
 </head>
 
 <body>
-    <p id="google-plus"> </p>
-    <p id="inbox"> </p>
+    <div class="container">
+
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="./img/google-plus.png" width="42" height="42" alt="Google+">
+                <div class="card-body">
+                    <h5 class="card-title">Google+</h5>
+                    <div class="card-footer">
+                        <p class="card-text" id="inbox"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="./img/inbox.png" width="42" height="42" alt="Inbox by Gmail">
+                <div class="card-body">
+                    <h5 class="card-title">Inbox by Gmail</h5>
+                    <div class="card-footer">
+                        <p class="card-text" id="inbox"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        var deathTimeGooglePlus = new Date("Aug 31, 2019 00:00:00").getTime(); //when G+ dies
-        var deathTimeInbox = new Date("Mar 31, 2019 00:00:00").getTime(); //when Inbox dies
+        var deathTimeGooglePlus = new Date("Aug 31, 2019 00:00:00").getTime();
+        var deathTimeInbox = new Date("Mar 31, 2019 00:00:00").getTime();
 
         var googlePlus = setInterval(function() {
             var now = new Date().getTime();
