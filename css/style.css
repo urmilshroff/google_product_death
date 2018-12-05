@@ -1,3 +1,15 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
 p {
     font-family: 'Roboto', sans-serif;
 }
@@ -16,4 +28,17 @@ p {
 
 #inbox {
     color: #4379e3;
+}
+
+.demo-card-square.mdl-card {
+    width: 320px;
+    height: 320px;
+}
+
+.demo-card-square>.mdl-card__title {
+    color: #fff;
+    background-image: url("../img/google-plus.png");
+    border-radius: 2px;
+    box-shadow: 0 0.7px 5px 0 rgba(0, 0, 0, 0.5);
+    overflow: auto;
 }
