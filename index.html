@@ -8,76 +8,41 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <script src="./js/script.js"></script>
 
     <title> Google Product Death Countdown </title>
 
 </head>
 
 <body>
-    <div class="container">
-
-        <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top" src="./img/google-plus.png" width="42" height="42" alt="Google+">
-                <div class="card-body">
-                    <h5 class="card-title">Google+</h5>
-                    <div class="card-footer">
-                        <p class="card-text" id="inbox"></p>
-                    </div>
+    <div id="bg"></div>
+    
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="./img/google-plus.png" width="42" height="42" alt="Google+">
+            <div class="card-body">
+                <h5 class="card-title">Google+</h5>
+                <div class="card-footer">
+                    <p class="card-text" id="google-plus"></p>
+                    <a href="#" class="btn btn-primary">Use it while it lasts!</a>
                 </div>
             </div>
-            <div class="card">
-                <img class="card-img-top" src="./img/inbox.png" width="42" height="42" alt="Inbox by Gmail">
-                <div class="card-body">
-                    <h5 class="card-title">Inbox by Gmail</h5>
-                    <div class="card-footer">
-                        <p class="card-text" id="inbox"></p>
-                    </div>
+        </div>
+        
+        <div class="card">
+            <img class="card-img-top" src="./img/inbox.png" width="42" height="42" alt="Inbox by Gmail">
+            <div class="card-body">
+                <h5 class="card-title">Inbox by Gmail</h5>
+                <div class="card-footer">
+                    <p class="card-text" id="inbox"></p>
+                    <a href="#" class="btn btn-primary">Use it while it lasts!</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        var deathTimeGooglePlus = new Date("Aug 31, 2019 00:00:00").getTime();
-        var deathTimeInbox = new Date("Mar 31, 2019 00:00:00").getTime();
-
-        var googlePlus = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = deathTimeGooglePlus - now;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("google-plus").innerHTML = "Google+ dead in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-            if (distance < 0) //once timer ends
-            {
-                clearInterval(googlePlus);
-                document.getElementById("google-plus").innerHTML = "R.I.P. Google+, 2011-2019";
-            }
-
-        }, 1000);
-
-        var inbox = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = deathTimeInbox - now;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("inbox").innerHTML = "Inbox by Gmail dead in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-            if (distance < 0) //once timer ends
-            {
-                clearInterval(inbox);
-                document.getElementById("inbox").innerHTML = "R.I.P. Inbox by Gmail, 2014-2019";
-            }
-
-        }, 1000);
-    </script>
 </body>
 
 </html>
