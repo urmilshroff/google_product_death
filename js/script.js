@@ -9,12 +9,12 @@ var googlePlus = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("google-plus").innerHTML = "Google+ dead in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    document.getElementById("google-plus-countdown").innerHTML = "G+ dead in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
     if (distance < 0) //once timer ends
     {
         clearInterval(googlePlus);
-        document.getElementById("google-plus").innerHTML = "R.I.P. Google+, 2011-2019";
+        document.getElementById("google-plus-countdown").innerHTML = "R.I.P. G+, 2011-2019";
     }
 
 }, 1000);
@@ -27,12 +27,12 @@ var inbox = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("inbox").innerHTML = "Inbox by Gmail dead in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    document.getElementById("inbox-countdown").innerHTML = "Inbox dead in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
     if (distance < 0) //once timer ends
     {
         clearInterval(inbox);
-        document.getElementById("inbox").innerHTML = "R.I.P. Inbox by Gmail, 2014-2019";
+        document.getElementById("inbox-countdown").innerHTML = "R.I.P. Inbox, 2014-2019";
     }
 
 }, 1000);
