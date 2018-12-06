@@ -4,8 +4,13 @@ body {
     text-align: center;
 }
 
+center {
+    padding-top: 30px;
+}
+
 #title {
     font-family: 'Product Sans', sans-serif;
+    font-size: 24px;
     color: #37474f;
 }
 
@@ -40,8 +45,8 @@ body {
 }
 
 .demo-card-square.mdl-card {
-    width: 320px;
-    height: 320px;
+    width: 360px;
+    height: 360px;
 }
 
 .demo-card-square>.mdl-card__title {
@@ -61,5 +66,14 @@ body {
     #google-card {
         width: 320px;
         height: 320px
+    }
+
+    #title {
+        font-size: 22px;
+    }
+
+    .demo-card-square.mdl-card {
+        width: 320px;
+        height: 320px;
     }
 }
