@@ -20,6 +20,12 @@ center {
     font-size: 16px
 }
 
+#allo-countdown {
+    color: #f4b914;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px
+}
+
 #google-plus-countdown {
     color: #dd4f43;
     font-family: 'Roboto Mono', monospace;
@@ -28,6 +34,10 @@ center {
 
 #inbox-logo {
     background-image: url("../img/inbox.png");
+}
+
+#allo-logo {
+    background-image: url("../img/allo.png");
 }
 
 #google-plus-logo {
