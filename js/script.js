@@ -1,6 +1,6 @@
 var deathTimeInbox = new Date("Mar 31, 2019 00:00:00").getTime();
 var deathTimeAllo = new Date("Mar 31, 2019 00:00:00").getTime();
-var deathTimeGooglePlus = new Date("Aug 31, 2019 00:00:00").getTime();
+var deathTimeGooglePlus = new Date("April 30, 2019 00:00:00").getTime();
 
 var inbox = setInterval(function() {
     var now = new Date().getTime();
