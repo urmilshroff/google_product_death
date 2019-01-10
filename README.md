@@ -5,5 +5,5 @@ If you hate the fact that Google is killing off half of the products that you us
 ## Products/services on death row:
 - Inbox by Gmail (March 2019)
 - Allo (March 2019)
-- Google+ (August 2019)
+- Google+ (April 2019)
 - Hangouts (some time in this or the next decade, we all know it's happening)
